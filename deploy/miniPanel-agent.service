@@ -1,0 +1,40 @@
+[Unit]
+Description=MiniPanel Agent Service
+Documentation=https://github.com/your-org/miniPanel
+After=network.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=minipanel
+Group=minipanel
+WorkingDirectory=/opt/miniPanel/agent
+ExecStart=/opt/miniPanel/agent/miniPanel-agent -config /etc/miniPanel/agent.yaml
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=10
+TimeoutStopSec=30
+KillMode=mixed
+KillSignal=SIGTERM
+
+# 安全设置
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/miniPanel /var/log/miniPanel /etc/miniPanel
+
+# 资源限制
+LimitNOFILE=1024
+LimitNPROC=512
+
+# 日志设置
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=miniPanel-agent
+
+# 环境变量
+Environment=TZ=Asia/Shanghai
+
+[Install]
+WantedBy=multi-user.target

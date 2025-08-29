@@ -1,0 +1,21 @@
+# MiniPanel 后端配置文件
+server:
+  host: "0.0.0.0"          # 服务器监听地址
+  port: 8080               # 服务器监听端口
+  mode: "release"          # 运行模式: debug, release, test
+  static_path: "./static"  # 静态文件路径
+
+database:
+  path: "./data/miniPanel.db"  # SQLite 数据库文件路径
+  
+auth:
+  jwt_secret: "your-super-secret-jwt-key-change-this-in-production"  # JWT 密钥，生产环境请修改
+  token_expire_hours: 24  # Token 过期时间（小时）
+
+# 日志配置
+log:
+  level: "info"           # 日志级别: debug, info, warn, error
+  file: "./logs/app.log"   # 日志文件路径
+  max_size: 100           # 日志文件最大大小（MB）
+  max_backups: 3          # 保留的日志文件数量
+  max_age: 28             # 日志文件保留天数
