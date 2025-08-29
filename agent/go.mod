@@ -2,10 +2,7 @@ module miniPanel-agent
 
 go 1.25
 
-require (
-	github.com/shirou/gopsutil/v3 v3.24.5
-	gopkg.in/yaml.v3 v3.0.1
-)
+require github.com/shirou/gopsutil/v3 v3.24.5
 
 require (
 	github.com/go-ole/go-ole v1.2.6 // indirect

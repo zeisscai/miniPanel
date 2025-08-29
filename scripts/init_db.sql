@@ -1,6 +1,9 @@
 -- MiniPanel 数据库初始化脚本
 -- SQLite 数据库表结构定义
 
+-- 开始事务
+BEGIN TRANSACTION;
+
 -- 用户表
 CREATE TABLE IF NOT EXISTS users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,

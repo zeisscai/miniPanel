@@ -41,15 +41,20 @@ api.interceptors.response.use(
 )
 
 // API方法
-export const apiMethods = {
-  // 获取节点列表
-  getNodes: () => api.get('/api/nodes'),
-  
-  // 获取实时监控数据
-  getRealTimeMetrics: (nodeId) => api.get(`/api/metrics/realtime?node_id=${nodeId}`),
-  
-  // 获取历史监控数据
-  getHistoryMetrics: (nodeId, days = 1) => api.get(`/api/metrics/history?node_id=${nodeId}&days=${days}`)
+// 获取节点列表
+export const getNodes = () => api.get('/api/nodes')
+
+// 获取实时监控数据
+export const getRealTimeMetrics = (nodeId) => api.get(`/api/metrics/realtime?node_id=${nodeId}`)
+
+// 获取历史监控数据
+export const getHistoryMetrics = (nodeId, startTime, endTime) => {
+  const params = new URLSearchParams({
+    node_id: nodeId,
+    start_time: startTime,
+    end_time: endTime
+  })
+  return api.get(`/api/metrics/history?${params}`)
 }
 
 export default api
