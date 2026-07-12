@@ -84,7 +84,7 @@ cp agent/config.yaml /etc/miniPanel/agent.yaml
 ./agent/miniPanel-agent -config /etc/miniPanel/agent.yaml
 ```
 
-## 📦 Agent 部署
+## Agent 部署
 
 ### 批量部署
 
@@ -119,7 +119,7 @@ vim hosts.txt
 ./scripts/deploy_agent.sh -u ubuntu -k ~/.ssh/id_rsa 192.168.1.100
 ```
 
-## ⚙️ 配置说明
+## 配置说明
 
 ### 后端配置 (`backend.yaml`)
 
@@ -155,7 +155,7 @@ collector:
   enable_temperature: true      # 启用温度监控
 ```
 
-## 🔧 服务管理
+## 服务管理
 
 ### Systemd 服务
 
@@ -187,7 +187,7 @@ sudo journalctl -u miniPanel-agent -f
 ./miniPanel-agent -config /etc/miniPanel/agent.yaml
 ```
 
-## 📊 API 文档
+## API 文档
 
 ### 认证
 
@@ -219,7 +219,7 @@ curl -X GET "http://localhost:8080/api/metrics/history?node_id=node-001&start_ti
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
-## 🏗️ 项目结构
+## 项目结构
 
 ```
 miniPanel/
