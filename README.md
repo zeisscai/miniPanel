@@ -2,7 +2,7 @@
 
 一个轻量级的服务器监控面板，基于 Go + Vue3 + SQLite 构建。
 
-## 🚀 特性
+## 特性
 
 - **轻量级**: 基于 SQLite 数据库，无需复杂的数据库配置
 - **实时监控**: 实时显示 CPU、内存使用率和温度信息
@@ -11,7 +11,7 @@
 - **易部署**: 提供一键安装脚本和 Agent 分发工具
 - **现代化UI**: 基于 Vue3 + Element Plus 的响应式界面
 
-## 📋 系统要求
+## 系统要求
 
 ### 服务端
 - Linux 系统 (Ubuntu 18.04+, CentOS 7+)
@@ -24,9 +24,7 @@
 - Linux 系统
 - 网络连接到服务端
 
-## 🛠️ 快速开始
-
-### 方式一：一键安装（推荐）
+## 快速开始
 
 ```bash
 # 下载项目
@@ -39,7 +37,7 @@ sudo ./scripts/install.sh
 
 安装完成后访问 `http://your-server-ip`，默认用户名 `admin`，密码 `admin123`。
 
-### 方式二：手动安装
+### 手动安装
 
 #### 1. 初始化数据库
 
@@ -278,16 +276,6 @@ miniPanel/
 └── README.md
 ```
 
-## 🔒 安全建议
-
-1. **修改默认密码**: 首次登录后立即修改默认管理员密码
-2. **JWT密钥**: 生产环境中修改 `jwt_secret` 为强密码
-3. **HTTPS**: 生产环境建议配置HTTPS
-4. **防火墙**: 配置防火墙规则，仅开放必要端口
-5. **定期备份**: 定期备份SQLite数据库文件
-
-## 🔍 故障排除
-
 ### 常见问题
 
 **Q: Agent无法连接到服务器**
@@ -330,34 +318,7 @@ sudo chmod 644 /opt/miniPanel/data/miniPanel.db
 - Agent日志: `/var/log/miniPanel/agent.log`
 - Systemd日志: `journalctl -u miniPanel-backend` / `journalctl -u miniPanel-agent`
 
-## 🤝 贡献指南
-
-1. Fork 项目
-2. 创建特性分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打开 Pull Request
-
-## 📄 许可证
-
-本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
-
-## 🙏 致谢
-
-- [Gin](https://github.com/gin-gonic/gin) - Go Web框架
-- [Vue.js](https://vuejs.org/) - 前端框架
-- [Element Plus](https://element-plus.org/) - Vue3 UI组件库
-- [gopsutil](https://github.com/shirou/gopsutil) - 系统信息采集库
-- [Chart.js](https://www.chartjs.org/) - 图表库
-
-## 📞 支持
 
 如果您遇到问题或有建议，请：
 
-- 提交 [Issue](https://github.com/your-org/miniPanel/issues)
-- 发送邮件到: support@example.com
-- 查看 [Wiki](https://github.com/your-org/miniPanel/wiki) 文档
-
----
-
-**MiniPanel** - 让服务器监控变得简单 🚀
+- 发送邮件到: info@sg-hpc.com.cn
